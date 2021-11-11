@@ -21,4 +21,10 @@ public class AsteroidsController {
         List<Asteroid> asteroids = asteroidRepository.findAll();
         return asteroids;
     }
+    
+   
+    @RequestMapping(value="/planet", method=RequestMethod.GET)
+    public Asteroid getByPlanet(String planet){
+        return new Asteroid(1L, "", "", "", "", "");
+    }
 }
